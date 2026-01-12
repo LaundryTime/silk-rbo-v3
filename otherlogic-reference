@@ -1,0 +1,107 @@
+	if khann:
+		khannCounter = 1
+	else:
+		khannCounter = 0
+	if karmelita:
+		karmelitaCounter = 1
+	else:
+		karmelitaCounter = 0
+	if nyleth:
+		nylethCounter = 1
+	else:
+		nylethCounter = 0
+	if cloverDancers:
+		cloverCounter = 1
+	else:
+		cloverCounter = 0
+	everbloomCounter = khannCounter + karmelitaCounter + nylethCounter + cloverCounter
+	if bellBeast || (clingGrip && hardSkips):
+		swiftStep = true
+	else:
+		swiftStep = false
+	if swiftStep:
+		driftersCloak = true
+	else:
+		driftersCloak = false
+	if hardSkips || (swiftStep && sisterSplinter):
+		clingGrip = true
+	else:
+		clingGrip = false
+	if widow:
+		needolin = true
+	else:
+		needolin = false
+	if actTwo && driftersCloak:
+		clawline = true
+	else:
+		clawline = false
+	if clawline:
+		faydownCloak = true
+	else:
+		faydownCloak = false
+	if actThree && forebrothers:
+		silkSoar = true
+	else:
+		silkSoar = false
+	if silkSoar:
+		elegyDeep = true
+	else:
+		elegyDeep = false
+	if everbloomCounter >= 3:
+		everbloom = true
+	else:
+		everbloom = false
+	if (blackThreads == false || savageBeastflyOne && moorwing && skullTyrant && mossMotherTwo && savageBeastflyTwo && lugoli):
+		blackThreadsBool = true
+	else:
+		blackThreadsBool = false
+	if (groal && laceTwo) && (greatConchflies && faydownCloak) && blackThreadsBool && bellBeast:
+		silkAndSoul = true
+	else:
+		silkAndSoul = false
+	if lastJudge || phantom:
+		actTwo = true
+	else:
+		actTwo = false
+	if silkAndSoul && grandMotherSilk && (allBosses && doubleGMS==false || (garmondAndZaza && fourthChorus && shakra)):
+		actThree = true
+	else:
+		actThree = false
+	if bellBeast:
+		bellMarrow = 1
+	else:
+		bellMarrow = 0
+	if ((allBosses) && (laceOne)) || (allBosses==false && (laceOne || clingGrip)) :
+		bellDeepDocks = 1
+	else:
+		bellDeepDocks = 0
+	if clingGrip || (hardSkips && (driftersCloak || swiftStep)) || fourthChorus:
+		bellGreymoor = 1
+	else:
+		bellGreymoor = 0
+	if clingGrip:
+		bellShellwood = 1
+	else: 
+		bellShellwood = 0
+	if widow:
+		bellBellhart = 1
+	else:
+		bellBellhart = 0
+	bellCounter = bellBellhart + bellDeepDocks + bellGreymoor + bellMarrow + bellShellwood
+	if bellCounter == 5:
+		fiveBells = true
+	else:
+		fiveBells = false
+		
+	if fourthChorus && laceOne==false && wormwaysKeyUsed==false:
+		deepDocksKeyUsed = true
+		
+	if bellBeast && (sisterSplinter && fourthChorus == false && laceOne == false && moorwing == false) && deepDocksKeyUsed==false:
+		wormwaysKeyUsed = true
+	
+	if randomBossList.size() == 2 && bellBeast == false:
+		wormwaysKeyUsed = true
+	
+	if randomBossList.size() == 1:
+		deepDocksKeyUsed = false
+		wormwaysKeyUsed = false
