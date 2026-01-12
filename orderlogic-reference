@@ -1,0 +1,280 @@
+	
+	if bellBeast == false && not possibleBossList.has("Bell Beast"):
+		possibleBossList.append("Bell Beast")
+	
+	
+	
+	if laceOne == false && not possibleBossList.has("Lace 1"):
+		if hardSkips && (clingGrip):
+			possibleBossList.append("Lace 1")
+		elif (swiftStep):
+			possibleBossList.append("Lace 1")
+	
+	if (greatConchflies || phantom) || (wormwaysKeyUsed && fourthChorus) || (hardSkips && wormwaysKeyUsed && (savageBeastflyOne || moorwing)) && laceOne == false && possibleBossList.has("Lace 1"):
+		possibleBossList.erase("Lace 1")
+	
+	
+	
+	if fourthChorus == false && not possibleBossList.has("Fourth Chorus"):
+		if allBosses && (driftersCloak && (laceOne || deepDocksKeyUsed)):
+			possibleBossList.append("Fourth Chorus")
+		elif allBosses==false && (driftersCloak):
+			possibleBossList.append("Fourth Chorus")
+	
+	if (actThree || (wormwaysKeyUsed && laceOne==false && clingGrip==false)) && fourthChorus == false && possibleBossList.has("Fourth Chorus"):
+		possibleBossList.erase("Fourth Chorus")
+	
+	
+	
+	if savageBeastflyOne == false && not possibleBossList.has("Savage Beastfly 1"):
+		if allBosses && hardSkips && (laceOne && driftersCloak):
+			possibleBossList.append("Savage Beastfly 1")
+		elif hardSkips && allBosses == false && (driftersCloak):
+			possibleBossList.append("Savage Beastfly 1")
+		elif (fourthChorus):
+			possibleBossList.append("Savage Beastfly 1")
+	
+	
+	
+	if moorwing == false && not possibleBossList.has("Moorwing"):
+		if hardSkips && allBosses && (laceOne && driftersCloak):
+			possibleBossList.append("Moorwing")
+		elif hardSkips && allBosses==false && (driftersCloak):
+			possibleBossList.append("Moorwing")
+		elif (actTwo || fourthChorus):
+			possibleBossList.append("Moorwing")
+	
+	if moorwing == false && possibleBossList.has("Moorwing"):
+		if (actTwo==false && actThree==false && hardSkips==false && sisterSplinter && deepDocksKeyUsed):
+			if hardSkips==false && sisterSplinter && deepDocksKeyUsed:
+				possibleBossList.erase("Moorwing")
+			elif allBosses && hardSkips && wormwaysKeyUsed && laceOne == false:
+				possibleBossList.erase("Moorwing")
+
+	
+	
+	if sisterSplinter == false && not possibleBossList.has("Sister Splinter"):
+		if (hardSkips):
+			possibleBossList.append("Sister Splinter")
+		elif (swiftStep):
+			possibleBossList.append("Sister Splinter")
+	
+	
+	
+	if (clingGrip) && skullTyrant == false && not possibleBossList.has("Skull Tyrant"):
+		possibleBossList.append("Skull Tyrant")
+	
+	
+	
+	if (clingGrip && (driftersCloak || swiftStep)) && widow == false && not possibleBossList.has("Widow"):
+		possibleBossList.append("Widow")
+	
+	
+	
+	if (needolin) && mossMotherTwo == false && not possibleBossList.has("Moss Mother 2"):
+		possibleBossList.append("Moss Mother 2")
+	
+	
+	
+	if greatConchflies == false && not possibleBossList.has("Great Conchflies"):
+		if allBosses && (clingGrip && laceOne):
+			possibleBossList.append("Great Conchflies")
+		elif allBosses == false && (clingGrip):
+			possibleBossList.append("Great Conchflies")
+	
+	
+	
+	if lastJudge == false && not possibleBossList.has("Last Judge"):
+		if allBosses && (fiveBells && needolin && laceOne):
+			possibleBossList.append("Last Judge")
+		elif allBosses == false && (fiveBells && needolin):
+			possibleBossList.append("Last Judge")
+	
+	
+	
+	if phantom == false && not possibleBossList.has("Phantom"):
+		if allBosses && (needolin && laceOne):
+			possibleBossList.append("Phantom")
+		elif allBosses == false && (needolin):
+			possibleBossList.append("Phantom")
+	
+	
+	
+	if (savageBeastflyOne && ((fourthChorus && actTwo) || actThree)) && savageBeastflyTwo == false && not possibleBossList.has("Savage Beastfly 2") && actOneLimiter == false:
+		possibleBossList.append("Savage Beastfly 2")
+	
+	
+	
+	if (actTwo) && cogworkDancers == false && not possibleBossList.has("Cogwork Dancers") && actOneLimiter == false:
+		possibleBossList.append("Cogwork Dancers")
+	
+	
+	
+	if (cogworkDancers) && trobbio == false && not possibleBossList.has("Trobbio") && actOneLimiter == false:
+		possibleBossList.append("Trobbio")
+	
+	
+	
+	if (cogworkDancers && clawline) && garmondAndZaza == false && not possibleBossList.has("Garmond & Zaza") && actOneLimiter == false:
+		possibleBossList.append("Garmond & Zaza")
+	
+	if (actThree) && garmondAndZaza == false && possibleBossList.has("Garmond & Zaza"):
+		possibleBossList.erase("Garmond & Zaza")
+	
+	
+	
+	if (clawline) && forebrothers == false && not possibleBossList.has("Forebrothers Signis & Gron") && actOneLimiter == false:
+		possibleBossList.append("Forebrothers Signis & Gron")
+	
+	
+	
+	if (clawline) && unravelled == false && not possibleBossList.has("The Unravelled") && actOneLimiter == false:
+		possibleBossList.append("The Unravelled")
+	
+	
+	
+	if (faydownCloak) && lugoli == false && not possibleBossList.has("Disgraced Chef Lugoli") && actOneLimiter == false:
+		possibleBossList.append("Disgraced Chef Lugoli")
+	
+	
+	
+	if (faydownCloak) && fatherFlame == false && not possibleBossList.has("Father of the Flame") && actOneLimiter == false:
+		possibleBossList.append("Father of the Flame")
+	
+	
+	
+	if (faydownCloak && greatConchflies) && voltvyrm == false && not possibleBossList.has("Voltvyrm") && actOneLimiter == false:
+		possibleBossList.append("Voltvyrm")
+	
+	
+	
+	if (greatConchflies && clawline) && ragingConchfly == false && not possibleBossList.has("Raging Conchfly") && actOneLimiter == false:
+		possibleBossList.append("Raging Conchfly")
+	
+	
+	
+	if (faydownCloak && cogworkDancers) && secondSentinel == false && not possibleBossList.has("Second Sentinel") && actOneLimiter == false:
+		possibleBossList.append("Second Sentinel")
+	
+	
+	
+	if (faydownCloak) && groal == false && not possibleBossList.has("Groal the Great") && actOneLimiter == false:
+		possibleBossList.append("Groal the Great")
+	
+	
+	
+	if (greatConchflies && faydownCloak && (cogworkDancers || groal)) && shakra == false && not possibleBossList.has("Shakra") && actOneLimiter == false:
+		possibleBossList.append("Shakra")
+	
+	if (actThree) && shakra == false && possibleBossList.has("Shakra"):
+		possibleBossList.erase("Shakra")
+	
+	
+	
+	if (actTwo) && broodmother == false && not possibleBossList.has("Broodmother") && actOneLimiter == false:
+		possibleBossList.append("Broodmother")
+	
+	
+	
+	if (faydownCloak) && firstSinner == false && not possibleBossList.has("First Sinner") && actOneLimiter == false:
+		possibleBossList.append("First Sinner")
+	
+	
+	
+	if laceTwo == false && not possibleBossList.has("Lace 2") && actOneLimiter == false:
+		if allBosses && (trobbio && clawline):
+			possibleBossList.append("Lace 2")
+		elif allBosses == false && (trobbio && clawline):
+			possibleBossList.append("Lace 2")
+	
+	
+	
+	if grandMotherSilk == false && not possibleBossList.has("Grand Mother Silk") && actOneLimiter == false:
+		if silkAndSoul:
+			if allBosses && (fourthChorus && shakra && laceTwo && garmondAndZaza):
+				possibleBossList.append("Grand Mother Silk")
+			elif allBosses == false && laceTwo:
+				possibleBossList.append("Grand Mother Silk")
+		elif doubleGMS && (laceTwo):
+			possibleBossList.append("Grand Mother Silk")
+	
+	
+	
+	if (actThree) && bellEater == false && not possibleBossList.has("Bell Eater") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Bell Eater")
+	
+	
+	
+	if (actThree) && lostGarmond == false && not possibleBossList.has("Lost Garmond") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Lost Garmond")
+	
+	
+	
+	if (actThree) && plasmifiedZango == false && not possibleBossList.has("Plasmified Zango") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Plasmified Zango")
+	
+	
+	
+	if (actThree) && pinstress == false && not possibleBossList.has("Pinstress") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Pinstress")
+	
+	
+	
+	if (silkSoar) && tormentedTrobbio == false && not possibleBossList.has("Tormented Trobbio") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Tormented Trobbio")
+	
+	
+	
+	if (silkSoar) && watcherEdge == false && not possibleBossList.has("Watcher at the Edge") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Watcher at the Edge")
+	
+	
+	
+	if (actThree) && crawfather == false && not possibleBossList.has("Crawfather") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Crawfather")
+	
+	
+	
+	if (elegyDeep) && khann == false && not possibleBossList.has("Crust King Khann") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Crust King Khann")
+	
+	
+	
+	if (elegyDeep) && karmelita == false && not possibleBossList.has("Skarrsinger Karmelita") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Skarrsinger Karmelita")
+	
+	
+	
+	if (silkSoar) && gurr == false && not possibleBossList.has("Gurr the Outcast") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Gurr the Outcast")
+	
+	
+	
+	if (silkSoar) && seth == false && not possibleBossList.has("Shrine Guardian Seth") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Shrine Guardian Seth")
+	
+	
+	
+	if (elegyDeep && seth) && nyleth == false && not possibleBossList.has("Nyleth") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Nyleth")
+	
+	
+	
+	if (elegyDeep) && palestag == false && not possibleBossList.has("Palestag") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Palestag")
+	
+	if (cloverDancers) && palestag == false && possibleBossList.has("Palestag"):
+		possibleBossList.erase("Palestag")
+	
+	
+	
+	if cloverDancers == false && not possibleBossList.has("Clover Dancers") && actTwoLimiter == false && actOneLimiter == false:
+		if allBosses && (palestag && elegyDeep):
+			possibleBossList.append("Clover Dancers")
+		elif allBosses == false && (elegyDeep):
+			possibleBossList.append("Clover Dancers")
+	
+	
+	
+	if (everbloom) && lostLace == false && not possibleBossList.has("Lost Lace") && actTwoLimiter == false && actOneLimiter == false:
+		possibleBossList.append("Lost Lace")
