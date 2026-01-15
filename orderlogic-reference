@@ -1,4 +1,4 @@
-	
+
 	if bellBeast == false && not possibleBossList.has("Bell Beast"):
 		possibleBossList.append("Bell Beast")
 	
@@ -10,18 +10,21 @@
 		elif (swiftStep):
 			possibleBossList.append("Lace 1")
 	
-	if (greatConchflies || phantom) || (wormwaysKeyUsed && fourthChorus) || (hardSkips && wormwaysKeyUsed && (savageBeastflyOne || moorwing)) && laceOne == false && possibleBossList.has("Lace 1"):
+#	if (greatConchflies || phantom) || (wormwaysKeyUsed && fourthChorus) || (hardSkips && wormwaysKeyUsed && (savageBeastflyOne || moorwing) || mossMotherTwo) && laceOne == false && possibleBossList.has("Lace 1"):
+	if (wormwaysKeyUsed && fourthChorus) || mossMotherTwo || (hardSkips && wormwaysKeyUsed && (savageBeastflyOne || moorwing) || (savageBeastflyTwo || cogworkDancers || forebrothers || unravelled || lugoli || fatherFlame || voltvyrm || ragingConchfly || groal || broodmother || firstSinner)) && laceOne == false && possibleBossList.has("Lace 1"):
 		possibleBossList.erase("Lace 1")
 	
 	
 	
 	if fourthChorus == false && not possibleBossList.has("Fourth Chorus"):
-		if allBosses && (driftersCloak && (laceOne || deepDocksKeyUsed)):
+		if allBosses && hardSkips && (bellBeast && (laceOne || wormwaysKeyUsed == false)):
+			possibleBossList.append("Fourth Chorus")
+		elif allBosses && hardSkips == false && (driftersCloak && (laceOne || wormwaysKeyUsed == false)):
 			possibleBossList.append("Fourth Chorus")
 		elif allBosses==false && (driftersCloak):
 			possibleBossList.append("Fourth Chorus")
 	
-	if (actThree || (wormwaysKeyUsed && laceOne==false && clingGrip==false)) && fourthChorus == false && possibleBossList.has("Fourth Chorus"):
+	if (actThree || (wormwaysKeyUsed && laceOne==false && clingGrip==false) || (wormwaysKeyUsed && laceOne==false && allBosses)) && fourthChorus == false && possibleBossList.has("Fourth Chorus"):
 		possibleBossList.erase("Fourth Chorus")
 	
 	
@@ -37,11 +40,13 @@
 	
 	
 	if moorwing == false && not possibleBossList.has("Moorwing"):
-		if hardSkips && allBosses && (laceOne && driftersCloak):
+		if hardSkips && allBosses && ((laceOne && driftersCloak && bellBeast) || actTwo || actThree):
 			possibleBossList.append("Moorwing")
-		elif hardSkips && allBosses==false && (driftersCloak):
+		elif hardSkips && allBosses==false && ((bellBeast && driftersCloak) || actTwo || actThree):
 			possibleBossList.append("Moorwing")
-		elif (actTwo || fourthChorus):
+		elif hardSkips == false && allBosses && (actTwo || (fourthChorus && bellBeast)):
+			possibleBossList.append("Moorwing")
+		elif hardSkips == false && allBosses == false && (actTwo || (fourthChorus && bellBeast)):
 			possibleBossList.append("Moorwing")
 	
 	if moorwing == false && possibleBossList.has("Moorwing"):
@@ -50,8 +55,16 @@
 				possibleBossList.erase("Moorwing")
 			elif allBosses && hardSkips && wormwaysKeyUsed && laceOne == false:
 				possibleBossList.erase("Moorwing")
-
-	
+		elif (actTwo==false && actThree==false && wormwaysKeyUsed):
+			if randomBossList.find("Skull Tyrant") < randomBossList.find("Bell Beast"):
+				if randomBossList.find("Skull Tyrant") != -1:
+					possibleBossList.erase("Moorwing")
+			if randomBossList.find("Lace 1") < randomBossList.find("Bell Beast"):
+				if randomBossList.find("Lace 1") != -1:
+					possibleBossList.erase("Moorwing")
+			if randomBossList.find("Phantom") < randomBossList.find("Bell Beast"):
+				if randomBossList.find("Phantom") != -1:
+					possibleBossList.erase("Moorwing")
 	
 	if sisterSplinter == false && not possibleBossList.has("Sister Splinter"):
 		if (hardSkips):
@@ -71,13 +84,18 @@
 	
 	
 	
-	if (needolin) && mossMotherTwo == false && not possibleBossList.has("Moss Mother 2"):
-		possibleBossList.append("Moss Mother 2")
+	if mossMotherTwo == false && not possibleBossList.has("Moss Mother 2"):
+		if allBosses && (needolin && laceOne):
+#		if allBosses && (needolin):
+			possibleBossList.append("Moss Mother 2")
+		elif allBosses == false && (needolin):
+			possibleBossList.append("Moss Mother 2")
 	
 	
 	
 	if greatConchflies == false && not possibleBossList.has("Great Conchflies"):
-		if allBosses && (clingGrip && laceOne):
+#		if allBosses && (clingGrip && laceOne):
+		if allBosses && (clingGrip):
 			possibleBossList.append("Great Conchflies")
 		elif allBosses == false && (clingGrip):
 			possibleBossList.append("Great Conchflies")
@@ -93,7 +111,8 @@
 	
 	
 	if phantom == false && not possibleBossList.has("Phantom"):
-		if allBosses && (needolin && laceOne):
+		if allBosses && (needolin):
+	#	if allBosses && (needolin && laceOne):
 			possibleBossList.append("Phantom")
 		elif allBosses == false && (needolin):
 			possibleBossList.append("Phantom")
