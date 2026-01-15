@@ -1,4 +1,4 @@
-	if khann:
+if khann:
 		khannCounter = 1
 	else:
 		khannCounter = 0
@@ -59,7 +59,7 @@
 		silkAndSoul = true
 	else:
 		silkAndSoul = false
-	if lastJudge || phantom:
+	if lastJudge || (phantom && allBosses == false) || (allBosses && phantom && laceOne):
 		actTwo = true
 	else:
 		actTwo = false
